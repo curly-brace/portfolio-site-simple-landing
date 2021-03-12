@@ -1,0 +1,367 @@
+// compress: true, autoprefixer: > 5%; last 2 Chrome versions; not ie 6-9
+html{box-sizing:border-box;font-size:16px}*,*:before,*:after{box-sizing:inherit}body,h1,h2,h3,h4,h5,h6,p,ol,ul{margin:0;padding:0;font-weight:normal}ol,ul{list-style:none}img{max-width:100%;height:auto}
+
+@import url('https://fonts.googleapis.com/css?family=Manjari:400,700|Open+Sans:300i,400,700&display=swap');
+@import "font.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, footer {
+    height: 80px;
+    background-color: #fffaf1;
+    padding: 10px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Manjari', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+
+    li {
+        display: inline-block;
+        font-weight: 700;
+        padding: 0 10px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+div.logo {
+    display: flex;
+    align-items: center;
+
+    div.logo-icon {
+        width: 50px;
+        height: 50px;
+        background-color: #3a6980;
+        border-radius: 15px 5px;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        line-height: 65px;
+        margin-right: 10px;
+    }
+
+    div.logo-text {
+        font-family: 'Manjari', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    span.logo-text-1 {
+        display: block;
+        font-size: 20px;
+    }
+
+    span.logo-text-2 {
+        display: block;
+        font-size: 15px;
+    }
+}
+
+.hero {
+    height: 700px;
+    background: rgb(234, 239, 240) url(./tic-tac-toe.png) repeat;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    padding: 0 150px;
+
+    .hero-left {
+        width: 70%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-size: 25px;
+            font-weight: 300;
+            font-style: italic;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+
+        }
+        h2 {
+            font-family: 'Manjari', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            color: #3596c7;
+            text-transform: uppercase;
+        }
+        h4 {
+            color: white;
+            background-color: black;
+            border-radius: 4px;
+            padding: 2px 20px 4px;
+        }
+    }
+
+    .hero-right {
+        width: 30%;
+        margin-top: 150px;
+
+        form {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 0 60px rgba(0, 0, 0, 0.2);
+            padding: 30px 20px;
+
+            h3 {
+                text-align: center;
+                font-family: 'Manjari', sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            input:not([type=submit]) {
+                border: none;
+                display: block;
+                width: 100%;
+                text-align: center;
+                font-size: 20px;
+                margin: 20px 0;
+                border-bottom: 1px solid grey;
+            }
+
+            input[type="submit"] {
+                border: none;
+                display: block;
+                width: 100%;
+                padding: 20px 0 10px;
+                background-color: #3596c7;
+                border-radius: 10px;
+                font-family: 'Manjari', sans-serif;
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: white;
+                margin: 20px 0;
+            }
+
+            span {
+                color: lightgray;
+                display: block;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.cards {
+    width: 90%;
+    margin: 100px auto;
+
+    .top-row {
+        display: flex;
+    }
+    .bottom-row {
+        margin-top: 50px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .card {
+        background-color: #3596c7;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+        padding: 50px;
+        width: 500px;
+        height: 300px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        h2 {
+            font-family: 'Manjari', sans-serif;
+            font-size: 30px;
+            text-transform: uppercase;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-weight: 300;
+            font-style: italic;
+            font-size: 16px;
+            padding-bottom: 20px;
+        }
+
+        .card-stats {
+            display: flex;
+            align-items: center;
+        }
+        .num {
+            font-size: 45px;
+            padding-right: 5px;
+        }
+        .num-title {
+            font-size: 16px;
+            padding-right: 40px;
+        }
+
+        &.centered {
+            text-align: center;
+            h2 {
+                font-size: 40px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .text {
+        padding: 0 50px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+
+        p {
+            margin-top: 10px;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+}
+
+.stats {
+    background: rgb(227, 217, 231) url(./tic-tac-toe.png) repeat;
+    padding: 150px 80px;
+
+    h2 {
+        font-family: 'Manjari', sans-serif;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 40%;
+        margin-bottom: 50px;
+    }
+
+    .stats-container {
+        display: flex;
+
+        .stat {
+            display: flex;
+        }
+
+        .stat-icon {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            background-color: #3a6980;
+            color: white;
+            font-family: 'Manjari', sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 120px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .stat-text {
+            margin: 0 30px;
+
+            h3 {
+                font-family: 'Manjari', sans-serif;
+                color: #3a6980;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 20px 0;
+            }
+            p {
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.whatever {
+    margin: 100px 50px;
+
+    h2 {
+        font-family: 'Manjari', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .things {
+        display: flex;
+
+        .thing {
+            margin: 50px 20px;
+            border-radius: 10px;
+            background-color: #3596c7;
+            color: white;
+            width: 33.33%;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.25);
+
+            &:hover {
+                box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.5);
+            }
+
+            span {
+                font-size: 50px;
+            }
+            h3 {
+                font-size: 25px;
+                margin-top: 30px;
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.last-resort {
+    background: rgb(167, 141, 94) url(./tic-tac-toe.png) repeat;
+    padding: 0 100px 100px;;
+    display: flex;
+
+    .last-left {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 70%;
+
+        h2 {
+            font-family: 'Manjari', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 40px;
+            margin: 40px 0;
+        }
+        span {
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+    }
+
+    .last-right {
+        &:extend(.hero .hero-right all);
+    }
+}
